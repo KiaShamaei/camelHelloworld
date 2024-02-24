@@ -1,0 +1,60 @@
+server:
+  port: 8081
+spring:
+  h2:
+    console.enabled: true
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.H2Dialect
+  amqp:
+    deserialization:
+      trust:
+        all: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+  kafka:
+    consumer:
+      group-id: group-1
+      auto-offset-reset: earliest
+      bootstrap-servers: localhost:9092
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      enabled: true
+    metrics:
+      enabled: true
+  metrics:
+    export:
+       prometheus:
+        enabled: true
+camel:
+  health:
+    consumers-enabled: true
+    enabled: true
+    routes-enabled: true
+    registry-enabled: true
+  component:
+    micrometer:
+      enabled: true
+      registry-name: prometheus
+      metrics-name-pattern: camel.route.${routeId}
+      metric-registry: prometheusMeterRegistry
+  springboot:
+    camel-events-timestamp-enabled: true
+    endpoint-runtime-statistics-enabled: true
