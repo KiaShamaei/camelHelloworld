@@ -1,11 +1,9 @@
 package org.example.config;
 import org.apache.camel.Exchange;
-import org.apache.camel.ExchangePropertyKey;
 import org.apache.camel.builder.RouteBuilder;
-import org.springframework.beans.factory.annotation.Autowired;
 
 
-public class CamelRouter extends RouteBuilder {
+public class CamelRouterKafka extends RouteBuilder {
 
     @Override
     public void configure() throws Exception {
@@ -32,20 +30,20 @@ public class CamelRouter extends RouteBuilder {
                     log.info("process comes here for --------------------------------> : {} {}", body , retryCount);
 
        })
-                .errorHandler(defaultErrorHandler()
+                .errorHandler(
+                       // DeadLetterChannelBuilder
+                        defaultErrorHandler()
                         .onExceptionOccurred(p->{
                             //process if exception happen
                             log.info("process if exception goes here ...");})
                         .maximumRedeliveries(3)
                         .redeliveryDelay(1000)
 
+
                 ).process(p->{
                     var body = (String) p.getIn().getBody().toString();
                     log.info("second process : {} " , body);
                 });
-
-
-
     }
 
 }

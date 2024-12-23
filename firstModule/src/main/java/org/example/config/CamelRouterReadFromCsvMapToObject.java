@@ -15,12 +15,11 @@ public class CamelRouterReadFromCsvMapToObject extends RouteBuilder {
         csvDataFormat.setDelimiter(",");
         csvDataFormat.setSkipHeaderRecord("true");
 
-        from("file:C:/blue/testCamel/firstModule/src/dataCsv?noop=false")
+        from("file:/Users/kiarash.shamaii/Documents/javaClass/camelHelloworld/data?noop=false")
                 .unmarshal(csvDataFormat)
                 .split(body())
                 .streaming()
                 .process(t->{
-                    log.info("=========================> {}" , t.getIn().getBody(String[].class));
                     String[] tBody = t.getIn().getBody(String[].class);
                     User user = new User();
                     user.setName(tBody[0]);
@@ -31,7 +30,7 @@ public class CamelRouterReadFromCsvMapToObject extends RouteBuilder {
                 .marshal()
                 .json()
                 .to("kafka:topic4?brokers=localhost:9092&groupId=task-group")
-                .log("obj go to topic 4 with this body  ${body}");
+                .log("obj send to from camel go to topic 4 with this body  ${body}");
     }
 
 }

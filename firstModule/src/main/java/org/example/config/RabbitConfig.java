@@ -1,3 +1,5 @@
+package org.example.config;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.amqp.core.Binding;

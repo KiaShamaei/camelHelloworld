@@ -21,6 +21,13 @@ public class KafkaListenerTest {
     }
 
 
+
+    @KafkaListener(autoStartup = "true",
+            topics = "topic1",
+            groupId = "task-group")
+    public void consume2(String value) throws InterruptedException {
+        log.info("--------------> AAA listener from camel seda get this value  : " + value);
+    }
     @RetryableTopic(attempts = "4",
             backoff = @Backoff(delay = 30000L, multiplier = 2),
             retryTopicSuffix = "_RETRY",
@@ -36,12 +43,6 @@ public class KafkaListenerTest {
         log.info(String.format(" listener get value and process  : " + value));
     }
     @KafkaListener(autoStartup = "true",
-            topics = "topic1",
-            groupId = "task-group")
-    public void consume2(String value) throws InterruptedException {
-        log.info("--------------> AAA listener from camel seda get this value  : " + value);
-    }
-    @KafkaListener(autoStartup = "true",
             topics = "topic3",
             groupId = "task-group")
     public void consume3(String value) throws InterruptedException {
@@ -51,18 +52,15 @@ public class KafkaListenerTest {
             topics = "topic4",
             groupId = "task-group")
     public void consume4(String value) throws InterruptedException, JsonProcessingException {
-        log.info("----------------->listener from camel file 4 get  " );
         User user = objectMapper.readValue(value, User.class);
-        log.info("----------------->listener from camel file 4 get {} " , user
-        );
+        log.info("----------------->listener from camel file 4 get {} " , user);
     }
     @KafkaListener(autoStartup = "true",
             topics = "topic5",
             groupId = "task-group")
     public void consume5(String value) throws InterruptedException, JsonProcessingException {
         User user = objectMapper.readValue(value, User.class);
-        log.info("----------------->listener from camel file 4 get {} " , user
-        );
+        log.info("----------------->listener from camel file 4 get {} " , user);
     }
 
     @KafkaListener(autoStartup = "true",
@@ -70,7 +68,7 @@ public class KafkaListenerTest {
             groupId = "task-group")
     public void consumeKia(String value) throws InterruptedException, JsonProcessingException {
         User user = objectMapper.readValue(value, User.class);
-        log.info("----------------->listener from camel file kia get {} " , user.getName());
+        log.info("----------------->listener from camel file kia queue get {} " , user.getName());
     }
 
     @KafkaListener(autoStartup = "true",

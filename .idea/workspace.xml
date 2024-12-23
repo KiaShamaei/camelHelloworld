@@ -1,8 +1,230 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="62bf912c-a296-485a-af3f-407cbbcf97c9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/firstModule/src/main/java/org/example/config/CamelRouterIdemPotency.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firstModule/src/main/java/org/example/config/saga/OrderProcessingSaga.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firstModule/src/main/java/org/example/config/saga/SagaStartRoute.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firstModule/src/main/java/org/example/controller/ContorollerIdempotency.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firstModule/src/main/java/org/example/config/CamelConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/firstModule/src/main/java/org/example/config/CamelConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firstModule/src/main/java/org/example/config/CamelRouter.java" beforeDir="false" afterPath="$PROJECT_DIR$/firstModule/src/main/java/org/example/config/CamelRouterKafka.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firstModule/src/main/java/org/example/config/CamelRouter2.java" beforeDir="false" afterPath="$PROJECT_DIR$/firstModule/src/main/java/org/example/config/CamelRouterSedaAndDirect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firstModule/src/main/java/org/example/config/CamelRouterReadFromCsvMapToObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/firstModule/src/main/java/org/example/config/CamelRouterReadFromCsvMapToObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firstModule/src/main/java/org/example/config/CamelRouterReadFromCsvMapToObjectWithChoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/firstModule/src/main/java/org/example/config/CamelRouterReadFromCsvMapToObjectWithChoice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firstModule/src/main/java/org/example/config/CamelRouterReadFromPathLogIt.java" beforeDir="false" afterPath="$PROJECT_DIR$/firstModule/src/main/java/org/example/config/CamelRouterReadFromPathLogIt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firstModule/src/main/java/org/example/config/RabbitConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/firstModule/src/main/java/org/example/config/RabbitConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firstModule/src/main/java/org/example/controller/ControllerKafkaWithSedaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/firstModule/src/main/java/org/example/controller/ControllerKafkaWithSedaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firstModule/src/main/java/org/example/service/CustomBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/firstModule/src/main/java/org/example/service/CustomBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firstModule/src/main/java/org/example/service/KafkaListenerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/firstModule/src/main/java/org/example/service/KafkaListenerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/main" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="jdkForImporter" value="21 (2)" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2coFEED9oyG6G4XGm6SJL84aUf4" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "configurable.group.tools",
+    "spring.configuration.checksum": "a03486a4ed039341695e842938cce9bf",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.HamidEx">
+    <configuration name="HamidEx" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.service.HamidEx" />
+      <module name="firstModule" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="camelHelloworld" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="camelHelloworld" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="App" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="ACTIVE_PROFILES" value="dev" />
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <module name="firstModule" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.App" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.HamidEx" />
+      <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+      <item itemvalue="Spring Boot.App" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.HamidEx" />
+        <item itemvalue="Spring Boot.App" />
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="62bf912c-a296-485a-af3f-407cbbcf97c9" name="Changes" comment="" />
+      <created>1708769912848</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1708769912848</updated>
+      <workItem from="1708769914732" duration="164000" />
+      <workItem from="1708770085346" duration="7931000" />
+      <workItem from="1709451978033" duration="14818000" />
+      <workItem from="1709720153446" duration="6301000" />
+      <workItem from="1710045336412" duration="598000" />
+      <workItem from="1710077814546" duration="1686000" />
+      <workItem from="1710756051499" duration="50000" />
+      <workItem from="1711204363533" duration="98000" />
+      <workItem from="1734507821391" duration="1505000" />
+      <workItem from="1734509523442" duration="14036000" />
+      <workItem from="1734683045949" duration="2839000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="false" />
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/firstModule/src/main/java/org/example/controller/ControllerKafkaWithSedaTest.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
 </project>

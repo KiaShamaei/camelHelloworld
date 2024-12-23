@@ -16,4 +16,6 @@ public class CustomBean {
         userEntity.setName(userEntity.getName()+"change");
         userRepository.save(userEntity);
     }
+
+
 }

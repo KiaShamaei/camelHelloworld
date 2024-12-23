@@ -8,14 +8,13 @@ public class CamelRouterReadFromPathLogIt extends RouteBuilder {
     //read from file path and log it
     @Override
     public void configure() throws Exception {
-        from("file:C:/blue/testCamel/firstModule/src/data?noop=false")
+        from("file:/Users/kiarash.shamaii/Documents/javaClass/camelHelloworld/data?noop=false")
                 .split()
                 .tokenize("\n")
                 .log("Read file ---------------------------------------->: ${file:name} with content: ${body}")
-                .process(t->{
-                    log.info("=========================> {}" , t.getIn().getBody(String.class));
+                .process(t -> {
+                    log.info("=========================> {}", t.getIn().getBody(String.class));
                 });
-
     }
 
 }
